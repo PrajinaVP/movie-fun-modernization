@@ -2,14 +2,14 @@
 
 Smoke Tests require server running on port 8080 by default.
 
-## Build JAR ignoring tests
+## Build WAR ignoring Smoke Tests
 
-```bash
-$ ./gradlew clean build -xtest
+```
+$ mvn clean package -DskipTests -Dmaven.test.skip=true
 ```
 
 ## Run Smoke Tests against specific URL
 
-```bash
-$ MOVIE_FUN_URL=http://moviefun.example.com ./gradlew test
+```
+$ MOVIE_FUN_URL=http://moviefun.example.com mvn test
 ```
